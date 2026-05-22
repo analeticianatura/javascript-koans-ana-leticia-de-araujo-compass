@@ -13,7 +13,7 @@ describe("About Objects", function () {
 
     it("should confirm that properties are case sensitive", function () {
     expect(megalomaniac.henchwoman).toBe("Harley");
-      expect(megalomaniac.henchWoman).toBe("Harley");
+      expect(megalomaniac.henchWoman).toBe(undefined);
     });
   });
 
@@ -29,7 +29,7 @@ describe("About Objects", function () {
     };
 
     var battleCry = megalomaniac.battleCry(4);
-    expect("They are Pinky and the Brain").toMatch(battleCry);
+    expect("They are Pinky and the Brain Brain Brain Brain").toMatch(battleCry);
   });
 
   it("should confirm that when a function is attached to an object, 'this' refers to the object", function () {
@@ -44,7 +44,7 @@ describe("About Objects", function () {
       }
     };
 
-    expect(currentYear).toBe(2026));
+    expect(currentYear).toBe(2026);
     expect(megalomaniac.calculateAge()).toBe(56);
   });
 
